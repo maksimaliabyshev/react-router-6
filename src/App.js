@@ -15,13 +15,14 @@ function App() {
             <Header />
             <main className="container content">
                 <Routes>
-                    <Route path="/" element={<Home />}>
-                        {/* <Route index path="/home" element={<Home />}></Route> */}
-                    </Route>
-                    <Route path="about" element={<About />}></Route>
-                    <Route path="contacts" element={<Contact />}></Route>
-                    <Route path="category/:name" element={<Categoty />}></Route>
-                    <Route path="meal/:id" element={<Recipe />}></Route>
+                    <Route path="/" element={<Home />}></Route>
+                    <Route path="/about" element={<About />}></Route>
+                    <Route path="/contacts" element={<Contact />}></Route>
+                    <Route
+                        path="/category/:name"
+                        element={<Categoty />}
+                    ></Route>
+                    <Route path="/meal/:id" element={<Recipe />}></Route>
                     <Route path="*" element={<NotFound />}></Route>
                 </Routes>
             </main>
