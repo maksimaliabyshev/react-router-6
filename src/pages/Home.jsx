@@ -18,22 +18,20 @@ function Home() {
                     .toLowerCase()
                     .includes(str.toLowerCase());
             })
-		);
-		str
-            ? setSearchParams({ search: str })
-            : setSearchParams({});
+        );
+        str ? setSearchParams({ search: str }) : setSearchParams({});
     };
-	useEffect(() => {
+    useEffect(() => {
         const search = Object.fromEntries([...searchParams]).search;
         getAllCategories().then((data) => {
-			setCatalog(data.categories);
-				setFilteredCatalog(
-                    search
-                        ? data.categories.filter((item) =>
-                              item.strCategory.toLowerCase().includes(search)
-                          )
-                        : data.categories
-                );
+            setCatalog(data.categories);
+            setFilteredCatalog(
+                search
+                    ? data.categories.filter((item) =>
+                          item.strCategory.toLowerCase().includes(search)
+                      )
+                    : data.categories
+            );
         });
     }, [searchParams]);
 
