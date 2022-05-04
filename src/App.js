@@ -5,7 +5,8 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
-import Movie from './pages/Movie';
+import Categoty from './pages/Categoty';
+import Recipe from './pages/Recipe';
 import NotFound from './pages/NotFound';
 
 function App() {
@@ -19,8 +20,8 @@ function App() {
                     </Route>
                     <Route path="about" element={<About />}></Route>
                     <Route path="contacts" element={<Contact />}></Route>
-                    <Route path="movies" element={<Movie />}></Route>
-                    <Route path="movies/:id" element={<Movie />}></Route>
+                    <Route path="category/:name" element={<Categoty />}></Route>
+                    <Route path="meal/:id" element={<Recipe />}></Route>
                     <Route path="*" element={<NotFound />}></Route>
                 </Routes>
             </main>

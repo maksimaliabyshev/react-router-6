@@ -6,9 +6,6 @@ function Header() {
                 <Link to="/">React Router 6</Link>
                 <ul id="nav-mobile" className="right hide-on-med-and-down">
                     <li>
-                        <Link to="movies">Movie</Link>
-                    </li>
-                    <li>
                         <Link to="contacts">Contacts</Link>
                     </li>
                     <li>

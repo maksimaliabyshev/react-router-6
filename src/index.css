@@ -6,9 +6,9 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 }
 
-code {
+/* code {
 	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
-}
+} */
 
 nav {
 	padding: 0 1rem;
@@ -17,4 +17,22 @@ nav {
 .content {
 	min-height: calc(100vh - 64px - 70px);
 	padding: 1.5rem 0;
+}
+
+.list {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
+	gap: 1rem;
+}
+
+.card {
+	display:flex;
+	flex-direction: column;
+}
+
+.card-content {
+	flex-grow: 1;
+}
+.img {
+	min-width: 100%;
 }
